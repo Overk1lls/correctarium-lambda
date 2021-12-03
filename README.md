@@ -9,7 +9,7 @@ Perform a POST request to the endpoint ```/api/text``` with a body that contains
 }
 ```
 
-If ```FileType``` is not one of the ```['doc', 'docx', 'rtf']``` than price and time to correctate will be 20% higher.
+If ```FileType``` is not one of the ```['doc', 'docx', 'rtf']``` then price and time will be 20% higher.
 
 Response will be something like this:
 ```
