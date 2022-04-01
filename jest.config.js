@@ -13,5 +13,5 @@ const config = {
     testEnvironment: 'node',
     extensionsToTreatAsEsm: ['.ts']
 };
-
+// eslint-disable-next-line no-undef
 module.exports = config;

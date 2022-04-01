@@ -1,4 +1,4 @@
-import { hrsToMs, calculateDate, processText, naiveRound } from '../src/utils/utils';
+import { hrsToMs, calculateDate, processText, naiveRound } from '../src/lib/utils';
 
 describe('Utils Test', () => {
     it('1 hour into 3 600 000 ms', () => {
@@ -131,10 +131,10 @@ describe('Utils Test', () => {
             'after the decimal. If the specified value is greater than the number of digits' +
             'after decimal in the actual string then the resulting value is padded with 0' +
             'to maintain the number of digits after decimal in the final output. Return value:' +
-            'It returns the number or string rounded up to the specified places after the decimal.' +
-            'If the specified value is greater than the number of digits after decimal in the' +
-            'actual string then the resulting value is padded with 0 to maintain the number of' +
-            'digits after decimal in the final output.';
+            'It returns the number or string rounded up to the specified places after' +
+            'the decimal. If the specified value is greater than the number of digits after' +
+            'decimal in the actual string then the resulting value is padded with 0' +
+            'to maintain the number of digits after decimal in the final output.';
         const iDate = new Date(2021, 12, 1, 14);
         const res = processText(text, 'type', iDate);
         const time = 3.85;
@@ -157,10 +157,10 @@ describe('Utils Test', () => {
             'after the decimal. If the specified value is greater than the number of digits' +
             'after decimal in the actual string then the resulting value is padded with 0' +
             'to maintain the number of digits after decimal in the final output. Return value:' +
-            'It returns the number or string rounded up to the specified places after the decimal.' +
-            'If the specified value is greater than the number of digits after decimal in the' +
-            'actual string then the resulting value is padded with 0 to maintain the number of' +
-            'digits after decimal in the final output.';
+            'It returns the number or string rounded up to the specified places after' +
+            'the decimal. If the specified value is greater than the number of digits after' +
+            'decimal in the actual string then the resulting value is padded with 0' +
+            'to maintain the number of digits after decimal in the final output.';
         const iDate = new Date(2021, 12, 1, 14);
         const res = processText(text, 'doc', iDate);
         const time = 3.21;

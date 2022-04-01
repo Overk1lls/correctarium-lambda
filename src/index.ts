@@ -1,4 +1,4 @@
-import { createApp } from "./middleware/app";
+import { createApp } from './middleware/app';
 
 const start = async () => {
     const app = createApp();

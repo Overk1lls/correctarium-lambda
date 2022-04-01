@@ -1,5 +1,10 @@
 export const hrsToMs = (hours: number) => hours * 60 * 60 * 1000;
 
+export const naiveRound = (num: number, decimals = 0) => {
+    const p = Math.pow(10, decimals);
+    return Math.round(num * p) / p;
+};
+
 export const calculateDate = (
     time: number,
     workFrom: number,
@@ -23,8 +28,8 @@ export const calculateDate = (
 
     do {
         // if issued on saturday or sunday (no work days)
-        if (endDate.getDay() == 6 || endDate.getDay() == 0) {
-            endDate.setDate(endDate.getDate() + (endDate.getDay() == 6 ? 2 : 1));
+        if (endDate.getDay() === 6 || endDate.getDay() === 0) {
+            endDate.setDate(endDate.getDate() + (endDate.getDay() === 6 ? 2 : 1));
             endDate.setHours(10, 0, 0, 0);
             curDayTime = hrsToMs(workTo - workFrom);
         }
@@ -57,7 +62,7 @@ export const processText = (text: string, fileType: string, startDate = new Date
         time += text.length / 333;
     }
 
-    // if file type is not one of the default types 
+    // if file type is not one of the default types
     // then add +20% to the price and time
     if (!defaultTypes.includes(fileType)) {
         cost += cost * 0.2;
@@ -77,9 +82,4 @@ export const processText = (text: string, fileType: string, startDate = new Date
         time: time + ' hours',
         whenReady: calculateDate(time, 10, 19, startDate)
     };
-};
-
-export const naiveRound = (num: number, decimals = 0) => {
-    const p = Math.pow(10, decimals);
-    return Math.round(num * p) / p;
 };
