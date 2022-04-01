@@ -5,7 +5,7 @@ Perform a POST request to the endpoint ```/api/text``` with a body that contains
 ```
 {
   "text": "text to translate or edit",
-  "fileType": "mock type of the file (doc, docx, rtf, other)"
+  "fileType": "mock type of the file ('doc', 'docx', 'rtf', other)"
 }
 ```
 

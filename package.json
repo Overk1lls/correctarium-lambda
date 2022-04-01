@@ -1,22 +1,27 @@
 {
-  "name": "correctarium",
-  "version": "1.0.0",
+  "name": "correctarium-lambda",
+  "version": "1.1.1",
   "description": "Lambda Correctarium Exercise",
   "main": "dist/src/index.js",
   "scripts": {
-    "test": "SET NODE_ENV=test & node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "start": "tsc & nodemon ."
+    "test": "jest",
+    "build": "tsc",
+    "start": "node dist/src/index.js",
+    "start:dev": "npm run build && npm start"
   },
-  "author": "Yury Pakhota",
+  "author": "Yurii Pakhota",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@types/babel__core": "^7.1.19",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.0.3",
+    "@types/morgan": "^1.9.3",
     "@types/node": "^16.11.11",
     "@types/supertest": "^2.0.11",
     "jest": "^27.4.2",
